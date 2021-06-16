@@ -7,8 +7,11 @@ app.use(express.static(__dirname + "/public"));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
+app.get("/shop", (req, res) => {
+    res.render("shop");
+});
 
-app.get("/", (req, res) => {
+app.get("/qr-scanner", (req, res) => {
     res.render("scanner");
 });
 

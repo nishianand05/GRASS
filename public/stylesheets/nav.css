@@ -1,0 +1,128 @@
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+nav {
+    background: #a98467;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.9));
+    position: relative;
+    z-index: 100;
+}
+
+
+#navHeader {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#brandName {
+    font-weight: 600;
+    font-size: x-large;
+}
+#brandName:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+#navButton img {
+    width: 40px;
+    height: 40px;
+}
+#navHeader #brandLogo img {
+    width: 50px;
+    height: 50px;
+}
+
+#navLinks ul{
+    margin: 0;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#navLinks ul li {
+    list-style: none;
+    float: right;
+    margin-right: 40px;
+    opacity: 0.8;
+}
+
+#navLinks ul li:hover {
+    opacity: 1;
+}
+
+#navLinks ul li a, #brandName a {
+    text-decoration: none;
+    color: white;
+}
+
+#logInBtn {
+    padding: 10px 20px;
+    border: 2px solid #F0EAD2;
+    border-radius: 4px;
+}
+
+#logInBtn:hover {
+    border: 3px solid #F0EAD2;
+}
+
+#navButton {
+    opacity: 0.8;
+    cursor: pointer;
+    border: 2px solid #F0EAD2;
+    border-radius: 4px;
+    height: 40px;
+    padding: 2px;
+}
+
+#navButton:hover {
+    opacity: 1;
+}
+
+@media (max-width:750px){
+    #navLinks{
+        width: 100%;
+        position: absolute;
+        top: 94px;
+        left: 0;
+        background: #a98467;
+    }
+    #navLinks ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    #navLinks ul li {
+        margin-right: 0;
+        padding: 40px;
+        width: -webkit-fill-available;
+        text-align: center;
+        border-top: 1px solid #6c584c80;
+        
+    }
+    #logInBtn {
+        border: none;
+        border-radius: 0;
+    }
+
+    #navLinks ul li:hover {
+        background: #6c584c80;
+        border: none;
+    }
+}
+
+.boxShadowTog {
+    box-shadow: 0px 4000px 4000px rgba(0,0,0,0.9) inset;
+}

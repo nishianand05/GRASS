@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>GRASS - QR Scanner</title>
+<%- include("partials/header") %>
     <link rel="stylesheet" href="stylesheets/scanner.css">
 </head>
 
 <body>
+
+  <button id="backButton"><a href="javascript:history.back()"><img src="images/back-button.svg" alt="back"></a></button>
 
   <div id="loadingMessage">🎥 Unable to access video stream (please make sure you have a webcam enabled)</div>
   
@@ -26,6 +21,5 @@
 
   <script src="https://cozmo.github.io/jsQR/jsQR.js"></script>
   <script src="/js/scanner.js"></script>
-</body>
 
-</html>
+<%- include("partials/footer.ejs")%>
