@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>GRASS - QR Scanner</title>
+    <link rel="stylesheet" href="stylesheets/scanner.css">
+</head>
+
+<body>
+
+  <div id="loadingMessage">🎥 Unable to access video stream (please make sure you have a webcam enabled)</div>
+  
+  <canvas id="canvas" hidden></canvas>
+  
+  <div id="output" hidden>
+    <div id="outputMessage">No QR code detected.</div>
+    <form hidden id="qrForm" action="/scan" method="POST">
+      <input id="qrFormInput" type="text" name="qrcode"  value="">
+      <input id="qrFormSubmit" type="submit" value="Proceed">
+    </form>
+
+  </div>
+
+  <script src="https://cozmo.github.io/jsQR/jsQR.js"></script>
+  <script src="/js/scanner.js"></script>
+</body>
+
+</html>
