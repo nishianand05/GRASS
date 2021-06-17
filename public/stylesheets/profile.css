@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Condensed&display=swap');
+
+html {
+    padding: 0;
+    margin: 0;
+}
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-image: url("/images/page-background.svg");
+}
+.show {
+    display: block;
+}
+.hide {
+    display: none;
+}
+.container {
+    margin: 0 40px;
+    position: relative;
+    z-index: -20;
+}
+
+.pageHeading {
+    text-align: center;
+    margin: 40px;
+}
+
+.userDetails {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+
+.userDetails .profilePicture {
+    border-radius: 100%;
+    height: 20vw;
+    width: 20vw;
+    overflow: hidden;
+    /* border: 1px solid red; */
+}
+
+.userDetails .profilePicture img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+.fullName {
+    margin: 15px;
+}
+
+.rewardsHeading {
+    text-align: center;
+}
+
+.rewardsDiv {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+    border-top: 10px solid #c0aa53;
+    border-radius: 15px;
+}
+
+.reward {
+    /* border: 1px solid blue; */
+    width: 100%;
+    margin-top: 30px;
+    border-radius: 10px;
+    background: #F0EAD2;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.rewardsName {
+    font-weight: bold;
+}
+
+.rewardDescription {
+    /* border: 1px solid red; */
+    margin: 10px 0;
+}
+
+.rewardsDets{
+    width: 50%;
+}
+
+.pointsEarned {
+    color: #c0aa53;
+    font-weight: bold;
+}
+
+.rewardImg img{
+    width: 5vw;
+}
+
+
+@media (max-width: 750px){
+    .userDetails .profilePicture {
+        height: 30vw;
+        width: 30vw;
+    }
+}
+
+@media (max-width: 600px){
+    .userDetails .profilePicture {
+        height: 40vw;
+        width: 40vw;
+    }
+}
+
+@media (max-width: 450px){
+    .userDetails .profilePicture {
+        height: 60vw;
+        width: 60vw;
+    }
+}
+
+@media (max-width: 300px){
+    .userDetails .profilePicture {
+        height: 70vw;
+        width: 70vw;
+    }
+}
+
+.newRewardDiv {
+    /* border: 1px solid red; */
+    color: #582F0E;
+    position: fixed;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    font-size: 2em;
+    padding: 40px 60px;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    box-shadow: 0px 0px 8000px 8000px rgba(0,0,0,0.85);
+    border-radius: 4px;
+    z-index: 500;
+}
+
+.crossBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+

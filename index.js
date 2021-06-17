@@ -15,9 +15,13 @@ app.get("/qr-scanner", (req, res) => {
     res.render("scanner");
 });
 
-app.post("/scan", (req, res) => {
+app.post("/newReward", (req, res) => {
     const qrcode = req.body.qrcode;
-    res.render("scan", {qrcode: qrcode});
+    res.render("profile", {qrcode: qrcode});
+});
+
+app.get("/profile", (req, res) => {
+    res.render("profile");
 });
 
 app.listen(port, () => console.log("Server at " + port))
