@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-<<<<<<< HEAD
 const mongoose = require("mongoose");
 const { Passport } = require("passport");
 const passport = require("passport");
@@ -14,16 +13,11 @@ mongoose.set('useUnifiedTopology', true);
 mongoose.connect(url,{ useNewUrlParser: true });
 mongoose.set('useFindAndModify', false);
 
-=======
-const port = 8080;
-
->>>>>>> fd15072200c232b3c27484d5e210539ae5698939
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
-<<<<<<< HEAD
 app.use(require("express-session")({
 	secret: "squad404",
 	resave: false,
@@ -84,8 +78,6 @@ app.get("/logout", function(req, res){
 
 
 
-=======
->>>>>>> fd15072200c232b3c27484d5e210539ae5698939
 app.get("/shop", (req, res) => {
     res.render("shop");
 });
