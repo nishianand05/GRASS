@@ -1,0 +1,25 @@
+<%- include("partials/header") %>
+    <link rel="stylesheet" href="stylesheets/scanner.css">
+</head>
+
+<body>
+
+  <button id="backButton"><a href="javascript:history.back()"><img src="images/back-button.svg" alt="back"></a></button>
+
+  <div id="loadingMessage">🎥 Unable to access video stream (please make sure you have a webcam enabled)</div>
+  
+  <canvas id="canvas" hidden></canvas>
+  
+  <div id="output" hidden>
+    <div id="outputMessage">No QR code detected.</div>
+    <form hidden id="qrForm" action="/newReward" method="POST">
+      <input id="qrFormInput" type="text" name="qrcode"  value="">
+      <input id="qrFormSubmit" type="submit" value="Proceed">
+    </form>
+
+  </div>
+
+  <script src="https://cozmo.github.io/jsQR/jsQR.js"></script>
+  <script src="/js/scanner.js"></script>
+
+<%- include("partials/footer.ejs")%>

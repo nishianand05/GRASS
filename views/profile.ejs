@@ -1,0 +1,66 @@
+<%-include("partials/header")%>
+    <link rel="stylesheet" href="stylesheets/profile.css">
+</head>
+<body>
+    <%-include("partials/nav")%>
+
+    <% if(qrcode){ %>
+        <div class="newRewardDiv show">
+            <div class="crossBtn"><img src="images/cross-button.svg" alt="" class="src"></div>
+            <div class="newRewardTxt">You earned <br> <%=qrcode.substr(-2)%> points!</div>
+        </div>
+    <%}%>
+
+
+    <div class="container">
+        <h1 class="pageHeading">Profile</h1>
+        <div class="userDetails">
+            <div class="profilePicture"><img src="images/profilePicture.jpg" alt=""></div>
+            <div class="fullName">Full name . <span class="userName">@fullname</span></div>
+            <div class="totalPoints">300 PTS</div>
+            <div class="progressBar">
+                <!-- <label for="file">Downloading progress:</label> -->
+                <progress id="points" value="52" max="100"> 52% </progress>
+            </div>
+        </div>
+        <h3 class="rewardsHeading">My rewards</h3>
+        <div class="rewardsDiv">
+            <div class="reward">
+                <div class="rewardImg"><img src="images/reward-image.svg" alt="" class="src"></div>
+                <div class="rewardsDets">
+                    <div class="rewardsName">Reward Name</div>
+                    <div class="rewardDescription">Reward earned for purchasing bamboo toothbrushes from EcoHealth</div>
+                </div>
+                <div class="pointsEarned">+10 pts</div>
+            </div>
+
+            <div class="reward">
+                <div class="rewardImg"><img src="images/reward-image.svg" alt="" class="src"></div>
+                <div class="rewardsDets">
+                    <div class="rewardsName">Reward Name</div>
+                    <div class="rewardDescription">Reward earned for purchasing bamboo toothbrushes from EcoHealth</div>
+                </div>
+                <div class="pointsEarned">+10 pts</div>
+            </div>
+
+            <div class="reward">
+                <div class="rewardImg"><img src="images/reward-image.svg" alt="" class="src"></div>
+                <div class="rewardsDets">
+                    <div class="rewardsName">Reward Name</div>
+                    <div class="rewardDescription">Reward earned for purchasing bamboo toothbrushes from EcoHealth</div>
+                </div>
+                <div class="pointsEarned">+10 pts</div>
+            </div>
+
+            <div class="reward">
+                <div class="rewardImg"><img src="images/reward-image.svg" alt="" class="src"></div>
+                <div class="rewardsDets">
+                    <div class="rewardsName">Reward Name</div>
+                    <div class="rewardDescription">Reward earned for purchasing bamboo toothbrushes from EcoHealth</div>
+                </div>
+                <div class="pointsEarned">+10 pts</div>
+            </div>
+        </div>
+    </div>
+
+<%-include("partials/footer")%>
