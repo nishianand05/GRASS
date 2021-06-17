@@ -6,7 +6,7 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
 
-const port = 8080;
+const port = 3000;
 
 var url = "mongodb+srv://nishianand:lol1234@grass.cbgqg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 mongoose.set('useUnifiedTopology', true);
