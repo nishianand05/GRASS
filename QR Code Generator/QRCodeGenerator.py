@@ -11,7 +11,7 @@ def gen_qr(data,img_path='.',img_filename='qr_code'):
     qr.make(fit=True)
     img = qr.make_image(fill_color='green', back_color='white')
     
-    logo_display = Image.open('Component 1 – 1.png')
+    logo_display = Image.open('Component 3 – 1.png')
     logo_display.thumbnail((100, 100))
     
     logo_pos = ((img.size[0] - logo_display.size[0]) // 2, (img.size[1] - logo_display.size[1]) // 2)
