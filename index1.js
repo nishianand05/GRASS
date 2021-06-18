@@ -1,3 +1,6 @@
+const dotenv = require('dotenv');
+dotenv.config();
+
 // Require
 
 const express = require('express'); 	
@@ -13,7 +16,7 @@ const User = require("./models/user.js");
 const port = 3000;
 
 // MongoDB
-var url = "mongodb+srv://nishianand:lol1234@grass.cbgqg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+var url = process.env.DB_URL;
 mongoose.set('useUnifiedTopology', true);
 mongoose.connect(url,{ useNewUrlParser: true });
 mongoose.set('useFindAndModify', false);
@@ -28,7 +31,7 @@ app.use(express.json());
 
 app.use(session({
 	secret: '123456',
-	resave: false,
+	resave: true,
 	saveUninitialized: true
 }));
 
@@ -37,10 +40,10 @@ app.use(passport.session());
 
 
 passport.use(new WebAppStrategy({
-    clientId: "c8f94fdd-fa43-4a92-8ea6-9e59d8c8c5ff",
-    tenantId: "a8dd73d8-66f8-4305-8e3d-8b16ba8b1ece",
-    secret: "ZDE0MThiYjgtNWE4NC00YTU5LTkzOTAtYzAyNjNiOTZlOGNj",
-	oauthServerUrl: "https://eu-gb.appid.cloud.ibm.com/oauth/v4/a8dd73d8-66f8-4305-8e3d-8b16ba8b1ece",
+    clientId: process.env.CLIENT_ID,
+    tenantId: process.env.TENANT_ID,
+    secret: process.env.SECRET,
+	oauthServerUrl: process.env.OAUTH_SERVER_URL,
 	redirectUri: "http://localhost:3000/appid/callback"
 }));
 
@@ -61,7 +64,9 @@ app.use(function(req, res, next){
 app.get('/appid/login', passport.authenticate(WebAppStrategy.STRATEGY_NAME, {
 	successRedirect: '/shop',
 	forceLogin: true
-}));
+}), function(req, res){
+    console.log(req);
+});
 
 app.get('/appid/callback', passport.authenticate(WebAppStrategy.STRATEGY_NAME));
 
@@ -94,7 +99,9 @@ app.get('/api/user', (req, res) => {
 });
 
 
-
+app.get("/", (req, res) => {
+    res.redirect("/shop");
+});
 
 app.get("/shop", (req, res) => {
     res.render("shop");
@@ -104,12 +111,12 @@ app.get("/qr-scanner", (req, res) => {
     res.render("scanner");
 });
 
-app.post("/newReward", (req, res) => {
+app.post("/newReward/profile", (req, res) => {
     res.render("profile", {qrcode: req.body.qrcode});
 });
 
 app.get("/profile", (req, res) => {
-    res.render("profile");
+    res.render("profile", {qrcode: undefined});
 });
 
-app.listen(port, () => console.log("Server at " + port))
+app.listen(process.env.PORT || port, () => console.log("Server running"))
