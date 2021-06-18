@@ -34,11 +34,11 @@ Reward Systems often catalyse the popularisation of healthy habits such as using
 
 ## Demo video
 
-[![Watch the video](https://github.com/nishianand05/GRASS/blob/main/images/She%20the%20Force%20Hack%20for%20Sustainability%20with%20tech%20solutions.png)](https://youtu.be/vOgCOoy_Bx0)
+[![Watch the video](https://github.com/nishianand05/GRASS/blob/f98e9df44f19646246b303f8dc8d0995c0c1cfde/images/Demo%20Video%20thumbnail.png)](https://youtu.be/vOgCOoy_Bx0)
 
 ## Project PPT
 
-[![Watch the video](https://github.com/nishianand05/GRASS/blob/main/images/She%20the%20Force%20Hack%20for%20Sustainability%20with%20tech%20solutions.png)](https://youtu.be/vOgCOoy_Bx0)
+[![Watch the video](https://github.com/nishianand05/GRASS/blob/f98e9df44f19646246b303f8dc8d0995c0c1cfde/images/PPT%20thumbnail.png)](https://youtu.be/vOgCOoy_Bx0)
 
 ## Getting started
 
