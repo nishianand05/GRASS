@@ -62,5 +62,6 @@ Reward Systems often catalyse the popularisation of healthy habits such as using
   <img src="https://contributors-img.web.app/image?repo=nishianand05/GRASS" />
 </a>
 
+- **Tanmaya Harichandan** - _Team Mentor_ - [tanmaya0102](https://github.com/tanmaya0102)
 
 
