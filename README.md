@@ -46,9 +46,9 @@ Reward Systems often catalyse the popularisation of healthy habits such as using
 
 ## Built with
 
-IBM Cloud Service: App ID (User Authentication and User Profiles for the WebApp)
-Languages for the WebApp: EJS, JavaScript and CSS
-For the QR Code Genetator: Python
+- [IBM Cloud Service: App ID](https://cloud.ibm.com/catalog/services/app-id) - User Authentication and User Profiles for the WebApp
+- Languages for the WebApp: EJS, JavaScript and CSS
+- For the QR Code Genetator: Python
 
 ## Solution Roadmap
 
