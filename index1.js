@@ -11,16 +11,22 @@ const session = require('express-session');
 const WebAppStrategy = require('ibmcloud-appid').WebAppStrategy;	
 
 const User = require("./models/user.js");
+const Product = require("./models/product.js");
+// const Product = require("seed.js");
+const seedDB = require('./seed');
 
 // Default port
 const port = 3000;
 
 // MongoDB
 var url = process.env.DB_URL;
-mongoose.set('useUnifiedTopology', true);
-mongoose.connect(url,{ useNewUrlParser: true });
-mongoose.set('useFindAndModify', false);
 
+try {
+    mongoose.connect( url, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true}, () =>
+    console.log("connected"));    
+    }catch (error) { 
+    console.log("could not connect");    
+}
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
@@ -31,7 +37,7 @@ app.use(express.json());
 
 app.use(session({
 	secret: '123456',
-	resave: true,
+	resave: false,
 	saveUninitialized: true
 }));
 
@@ -56,7 +62,7 @@ app.use(function(req, res, next){
 	next();
 })
 
-
+seedDB();
 
 // Routes
 
@@ -104,19 +110,24 @@ app.get("/", (req, res) => {
 });
 
 app.get("/shop", (req, res) => {
-    res.render("shop");
+    Product.find({}, function(err, products){
+        if(err) console.log("Product Error");
+        res.render("shop", { products: products });
+    })
+    
 });
 
 app.get("/qr-scanner", (req, res) => {
     res.render("scanner");
 });
 
-app.post("/newReward/profile", (req, res) => {
-    res.render("profile", {qrcode: req.body.qrcode});
+app.post("/newReward", (req, res) => {
+    res.render("profile", {qrcode: req.body.qrcode, name: req.user.name, email: req.user.email, profilePicture: req.user.picture});
 });
 
 app.get("/profile", (req, res) => {
-    res.render("profile", {qrcode: undefined});
+    // console.log(req.user)
+    res.render("profile", {qrcode: undefined, name: req.user.name, email: req.user.email, profilePicture: req.user.picture});
 });
 
 app.listen(process.env.PORT || port, () => console.log("Server running"))
