@@ -22,7 +22,7 @@ What better way to promote Biodegradable Packaging than to start a reward system
 
 ### What's the problem?
 
-381 million tonnes of plastic waste is produced by the world with in an year currently and it is claimed to be doubled by 2034. Over 50% of this is single use plastic while only 9% has ever been recycled. Around 12.7 million tonnes of plastic yearly is dumped into water while the rest goes to dumping yards where they amount to mountains of garbage. Plastic waste is turning into a major land and ocean pollutant.
+381 million tonnes of plastic waste is produced by the world within an year currently and it is claimed to be doubled by 2034. Over 50% of this is single use plastic while only 9% has ever been recycled. Around 12.7 million tonnes of plastic yearly is dumped into water while the rest goes to dumping yards where they amount to mountains of garbage. Plastic waste is turning into a major land and ocean pollutant.
 
 ### How can technology help?
 
