@@ -22,11 +22,11 @@ What better way to promote Biodegradable Packaging than to start a reward system
 
 ### What's the problem?
 
-381 million tonnes of plastic waste is produced by the world within an year currently and it is claimed to be doubled by 2034. Over 50% of this is single use plastic while only 9% has ever been recycled. Around 12.7 million tonnes of plastic yearly is dumped into water while the rest goes to dumping yards where they amount to mountains of garbage. Plastic waste is turning into a major land and ocean pollutant.
+Currently 381 million tonnes of plastic waste is produced by the world within a year and it is claimed to be doubled by 2034. Over 50% of this is single use plastic while only 9% has ever been recycled. Around 12.7 million tonnes of plastic yearly is dumped into oceans while the rest goes into the dumping yards where they amounts to mountains of garbage. Plastic waste is turning into a major land and ocean pollutant.
 
 ### How can technology help?
 
-The only way to control the further input of plastic waste is to normalize the usage of more sustainable products such as online order and courier packaging made out of biodegradable material. This can be obtained when we promote such products and that is where our technology comes to play. 
+The only way to control the further input of plastic waste is to normalize the usage of more sustainable products such as online orders and courier packaging made out of biodegradable material. This can be obtained when we promote such products and that is where our technology comes to play. 
 
 ### The idea
 
