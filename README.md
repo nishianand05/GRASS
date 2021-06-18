@@ -58,4 +58,9 @@ Reward Systems often catalyse the popularisation of healthy habits such as using
 
 ## Authors
 
+<a href="https://github.com/nishianand05/GRASS/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=nishianand05/GRASS" />
+</a>
+
+
 
