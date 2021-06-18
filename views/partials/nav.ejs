@@ -5,14 +5,14 @@
     </div>
     <div id="navLinks" class="show">
         <ul>
-            <li><a href="#">EXPLORE</a></li>
+            <li><a href="/shop">EXPLORE</a></li>
             <li><a href="/qr-scanner">QR SCANNER</a></li>
             <li><a href="#">ABOUT</a></li>
             <% if(!currentUser){ %>
-            <li id="logInBtn"><a href="#" >LOG IN</a></li>
+            <li id="logInBtn"><a href="/appid/login" >LOG IN</a></li>
             <% } else { %>
             <li id="profileLink"><a href="/profile" >Profile</a></li>
-            <li><a href="/logout" >Logout</a></li>
+            <li><a href="/appid/logout" >Logout</a></li>
             <% } %>
         </ul>
     </div>
